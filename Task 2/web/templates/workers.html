@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <!--Showing basic information of the people running the restaurant accompanied by the employee picture-->
+  <section class = "sec-content">
+    <div class = "worker-info-container">
+      {% for tempWorker in workers %}
+      <div class = "worker-profile-container flexCenter">
+        <img tabindex="0" class = "workerPFP" src = "{{ tempWorker.pfp }}" alt = "{{ tempWorker.alt_text }}" title = "{{ tempWorker.alt_text }}">
+        <p tabindex="0" class = "info-style">
+          Name: {{ tempWorker.name }}<br>
+          Position: {{ tempWorker.position }}<br>
+          Period Working: {{ tempWorker.period }} years<br>
+          Quote: {{ tempWorker.quote }}
+        </p>
+      </div>
+      {% endfor %}
+  </section>
+{% endblock %}

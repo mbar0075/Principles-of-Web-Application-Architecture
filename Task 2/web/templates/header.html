@@ -1,0 +1,36 @@
+<!-- Implementing a navigation bar for Desktop-->
+<nav class = "Desktop-Nav sticky">
+  <ul class = "nav-list">
+    <li class="nav-elem"> <a class="nav-link" href="main.php">Home</a></li>
+    <li class="nav-elem"> <a class="nav-link" href="contact.php">Contact Us</a></li>
+    <li class="nav-elem"> <a class="nav-link" href="menu.php">Menu</a></li>
+    <li class="nav-elem"> <a class="nav-link" href="favourites.php">Favourites</a></li>
+    <li class="nav-elem"> <a class="nav-link" href="workers.php">Workers</a></li>
+  </ul>
+</nav>
+
+<!-- Implementing a navigation bar for Mobile-->
+<nav class = "Mobile-Nav sticky">
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a class="icon" onclick="navFunction()">
+  <i class="fa fa-bars"></i>
+
+  <a href="#home" class="active"></a>
+    </a>
+  </div>
+
+    <!-- Navigation links (hidden by default) -->
+    <div id="link-container">
+      <div id="myLinks">
+        <ul>
+          <li class = "list-link-item"><a class = "link-item" href="main.php">Home</a></li>
+          <li class = "list-link-item"><a class = "link-item"href="contact.php">Contact Us</a></li>
+          <li class = "list-link-item"><a class = "link-item" href="menu.php">Menu</a></li>
+          <li class = "list-link-item"><a class = "link-item" href="favourites.php">Favourites</a></li>
+          <li class = "list-link-item"><a class = "link-item"href="workers.php">Workers</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>

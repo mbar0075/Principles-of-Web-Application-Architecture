@@ -1,0 +1,32 @@
+<!--This is the template layout that will be used by twig-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="CIS1054-DYNAMIC_WEB_APPLICATION" />
+  <meta name="author" content="Jerome Agius/Matthias Bartolo/Isaac Muscat" />
+  <title>{{ title }}</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo.ico" />
+  <script src="https://kit.fontawesome.com/20e8212d54.js" crossorigin="anonymous"></script>
+  <!-- Core theme CSS -->
+  <link href="../css/main.css" rel="stylesheet" />
+  <script src="../js/main.js"></script>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <!-- Displaying the page Title, Sub title and respective image-->
+  <section class = "sec-masthead">
+    <header class ="masthead {{mastheadImg}}">
+      <h1 tabindex="0" class="headertext">{{MTitle}}</h1>
+      <h2 tabindex="0" class="subheadertext">{{MSTitle}}</h2>
+    </header>
+  </section>
+
+  {% block content %}
+  {% endblock %}
+
+  {% include 'footer.html' %}
+</body>
+</html>

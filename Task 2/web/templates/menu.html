@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <section class = "sec-content flexCenter">
+  <!--Looping through every Category Row-->
+  {% for Categories in foodCategories %}
+  <div class = "flexCenter">
+  <table class = "menu-info">
+    <tbody>
+      <tr>
+        <!--Displaying Category name-->
+        <th class = "menu-header"><a tabindex="0">{{ Categories.categoryName }}</a></th>
+      <tr>
+    <!--Looping through every food item Row -->
+    {% for food in foodItems %}
+      <!--Checking if the food item categoryId corresponds to the Categories' categoryID-->
+        {% if food.categoryId == Categories.categoryID %}
+          <!--Displaying relevant attributes from food item Row-->
+          <tr class = "table-data italics">
+            <!--The food item name, will serve as a link to the dishDetails.php page, with the item's Id as a parameter, when clicked-->
+            <td><a class="menu-link" tabindex="0" href="dishDetails.php?requiredItemId={{ food.itemId }}">{{ food.itemName }}</a></td>
+            <td class = "align-right"><a tabindex="0"> € {{ food.itemPrice }}</a></td>
+          </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+</section>
+{% endblock %}

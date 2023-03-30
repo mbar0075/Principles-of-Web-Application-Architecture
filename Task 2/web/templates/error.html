@@ -1,0 +1,13 @@
+{% extends "errorLayout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+<body>
+  <!--Displaying respective error message and image, and redirection link to the main page-->
+  <div class="headingError">
+    <h1 tabindex="0"><u>{{title}}</u></h1>
+    <h2 tabindex="0" class = "EText">{{message}}</h2>
+    <a href="http://{{ip}}/ProjectPart2/web/main.php"><button id="HomeButton" type="button">Go Back To Home Page!</button></a>
+  </div>
+</body>
+{% endblock %}

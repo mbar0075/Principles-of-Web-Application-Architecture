@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <!--Displaying Booking form-->
+  <section class = "sec-content flexCenter">
+    <div class = "booking-container">
+      <form class="contact-form" method="post" action="contactResp.php">
+        <h3 class = "sec-contact-title">Booking</h3>
+        <p class="error">{{ nameErr }}{{ tnxMessage }}</p>
+        <input type="text" id="name" name="name" tabindex="0" placeholder="Name" value="{{name}}" required><br>
+        <p class="error">{{ emailErr }}</p>
+        <input type="email" id="email" name="email" tabindex="0" placeholder="Email Address" value="{{email}}" required><br>
+        <p class="error">{{ mobileNoErr }}</p>
+        <input type="tel" id="mobile-no" name="mobile-no" tabindex="0" placeholder="Mobile No" value="{{mobileNo}}" required><br>
+        <p class="error">{{ noOfPeopleErr }}</p>
+        <input type="number" id="no-of-people" name="no-of-people" tabindex="0" placeholder="No of people" value="{{noOfPeople}}" required><br>
+        <p class="error">{{ dateErr }}</p>
+        <input type="date" id="date" name="date" tabindex="0" placeholder="Date" value="{{date}}" required><br>
+        <input class="contact-input-btn" name="booking_btn" tabindex="0" type="submit">
+      </form>
+    </div>
+
+    <!--Displaying Query/Complaints form-->
+    <div class = "contact-container">
+      <form class="email-form" method="post" action="contactResp.php">
+        <h3 class = "sec-contact-title">Send any Queries/Complaints</h3>
+        <p class="error">{{ emailErr2 }}{{ tnxMessage2 }}</p>
+        <input type="email" id="email2" name="email2" tabindex="0" placeholder="Email Address" value="{{ email2 }}" required><br>
+        <p class="error">{{ subjectErr }}</p>
+        <select id="subject" name="subject" tabindex="0" placeholder="Subject" value="{{ subject }}" required>
+        <option value="Query">Query</option>
+        <option value="Complaint">Complaint</option>
+        </select><br>
+        <p class="error">{{ messageErr }}</p>
+        <textarea class="email-textarea" tabindex="0" name="message" placeholder="Leave a message here!" required>{{ message2 }}</textarea><br>
+        <input class="contact-input-btn" name="complaint_btn" tabindex="0" type="submit">
+      </form>
+    </div>
+
+</section>
+{% endblock %}

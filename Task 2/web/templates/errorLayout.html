@@ -1,0 +1,21 @@
+<!--This is the template layout for error pages that will be used by twig-->
+<!DOCTYPE html>
+<html class="{{PageImgClass}}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="CIS1054-DYNAMIC_WEB_APPLICATION" />
+  <meta name="author" content="Jerome Agius/Matthias Bartolo/Isaac Muscat" />
+  <title>{{ title }}</title>
+  <link rel="icon" type="image/x-icon" href="http://{{ip}}/ProjectPart2/images/logo.ico" />
+  <script src="https://kit.fontawesome.com/20e8212d54.js" crossorigin="anonymous"></script>
+  <!-- Core theme CSS -->
+  <link href="http://{{ip}}/ProjectPart2/css/main.css" rel="stylesheet"/>
+  <script src="http://{{ip}}/ProjectPart2/js/main.js"></script>
+</head>
+
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

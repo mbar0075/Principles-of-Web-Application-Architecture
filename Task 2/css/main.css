@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Varela+Round&display=swap');
+
+/*Website colours/Fonts*/
+:root{
+--red: #9f1000;
+--blue: #002a86;
+--yellow: #fccc00;
+--dark-orange: #d47311;
+--light-blue: #5c9ad1;
+--black: #000;
+--white: #FFFFFF;
+--TitleF: 'Lobster';
+--MainF: 'Varela Round';
+}
+
+/*Generic styles used when required*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: var(--yellow);
+  font-size: 0.6vw;
+}
+
+/*Styles used to style the computer nav bar*/
+.nav-list{
+    border-bottom: 6px solid;
+    border-color: var(--light-blue);
+    padding: 0px 1vw;
+}
+
+.nav-list, .nav-elem, a.nav-link:link, a.nav-link:visited {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 2vw;
+  font-family: var(--MainF), sans-serif;
+  text-decoration: none;
+  list-style: none;
+  justify-content:space-around;
+  padding: 0.6vh 0px;
+}
+
+a.nav-link:hover{
+  color: var(--yellow);
+}
+
+/*Styles used to style each website masthead*/
+.masthead-main {
+  background-image:url("../images/home-masthead.jpg");
+}
+
+.masthead-workers {
+  background-image:url("../images/worker-masthead.jpg");
+}
+
+.masthead-contact {
+    background-image:url("../images/contact-masthead.jpg");
+}
+
+.masthead-menu {
+  background-image:url("../images/menu-picture.jpeg");
+}
+
+.masthead-dish-details {
+  background-image:url("../images/dish-details-picture.jpg");
+}
+
+.masthead-favourite {
+  background-image:url("../images/favourite-masthead.jpg");
+}
+
+.masthead {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height:45rem;
+  font-family: var(--TitleF), sans-serif;
+  border-bottom: 6px solid;
+  border-color: var(--white);
+}
+
+.headertext{
+  text-shadow: 4px 4px 4px var(--black);
+  text-align: center;
+  color: var(--white);
+  font-size:3.7em;
+  padding-top: 15%;
+  background-color: transparent;
+}
+
+.subheadertext{
+  text-shadow: 4px 4px 4px var(--black);
+  text-align: center;
+  color: var(--white);
+  font-size:2.5em;
+  padding-top: 1%;
+  background-color: transparent;
+}
+
+/*These styles apply to generic section (Home Page) */
+.sec-content {
+  background: linear-gradient(var(--yellow),var(--dark-orange));
+  padding: 7vh 0px;
+  min-height: 400px;
+}
+
+.info-img {
+  width: 60vw;
+  height: 60vh;
+  border: 5px solid;
+  border-radius: 50px;
+  border-width: 5px;
+  border-color: var(--white);
+  margin: 7.5vh 1vw;
+}
+
+.info-par {
+  background-color: var(--red);
+  color: var(--white);
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 15px 20px;
+  border-color: var(--white);
+  font-weight: bold;
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+  height: 60vh;
+  margin: 7.5vh 1vw;
+  text-align: justify;
+}
+
+.info-elem {
+  display:flex;
+  padding: 2vh 2vw;
+}
+
+.list-elem {
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+}
+
+.remove_p {
+  list-style-type: none;
+}
+
+.chicken_p {
+  list-style-type: "🍗";
+}
+
+.fries_p {
+  list-style-type: "🍟";
+}
+
+.beer_p {
+  list-style-type: "🍺";
+}
+
+.main-list-style {
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+}
+
+/*These styles apply to open/contact section*/
+.open-contact, .address {
+  padding: 0px 25%;
+}
+
+.info-open-container, .address-container, .contact-container, .booking-container, .favourite-container {
+  display: flex;
+  flex-wrap: flex;
+  justify-content: center;
+  background-color: var(--red);
+  color: var(--white);
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 15px 20px;
+  border-color: var(--white);
+  font-weight: bold;
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+  margin: 1vh 1vw;
+  text-align: center;
+}
+
+/*These styles apply to footer section (Main Page)*/
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 6px solid;
+  border-color: var(--light-blue);
+  background-color: var(--blue);
+  color: var(--white);
+  list-style: none;
+  justify-content:center;
+  padding: 1.5vh 0px;
+}
+
+.footer {
+  background-color: var(--blue);
+  color: var(--white);
+  justify-content: space-between;
+  padding: 1.5vh 1.5vw;
+  font-family: var(--MainF), sans-serif;
+}
+
+.footer-text {
+  font-size: 1vw;
+}
+
+.fa-facebook, .fa-facebook:visited, .fa-twitter, .fa-twitter:visited, .fa-instagram, .fa-instagram:visited{
+  color: var(--white);
+  margin: 0px 8vw;
+}
+
+.fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
+  color: var(--yellow);
+}
+
+/* Style the navigation menu*/
+.topnav {
+  overflow: hidden;
+  background-color: var(--blue);
+  position: relative;
+  max-width: 100vw;
+  border-bottom: 4px solid var(--light-blue);
+}
+
+/* Style navigation menu links*/
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  min-height: 45px;
+}
+
+/* Style the hamburger menu */
+.icon {
+  background: var(--blue);
+  color: var(--white);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 50px;
+}
+
+.icon:hover{
+  background: var(--dark-orange);
+}
+
+#myLinks {
+  display: none;
+}
+
+.list-link-item {
+  border-bottom: 4px solid var(--light-blue);
+  border-right: 4px solid var(--light-blue);
+  background-color: var(--blue);
+  padding: 5px 0px;
+}
+
+.Desktop-Nav, .Mobile-Nav{
+  z-index: 2;
+}
+
+div#link-container {
+  position: absolute;
+}
+
+.link-item {
+  text-decoration: none;
+  color: white;
+  font-size: 5vw;
+  padding: 0px 15px;
+  font-family: var(--MainF), sans-serif;
+  display: flex;
+  align-items: stretch;
+}
+
+.list-link-item:hover {
+  background-color: var(--dark-orange);
+}
+
+/*Workers Page*/
+.workerPFP {
+  height: 45vh;
+  border-radius: 500px;
+  border: 4px solid var(--white);
+}
+
+.info-style {
+  background-color: var(--red);
+  color: var(--white);
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 15px 20px;
+  border-color: var(--white);
+  font-weight: bold;
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+  height: 30vh;
+  width: 70vw;
+  margin: 7.5vh 1vw;
+  text-align: justify;
+}
+
+/*Contact Page*/
+.sec-contact-title, .sec-favourite-title {
+  font-family: var(--MainF), sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 2vw;
+}
+
+.email-textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  width: 40vw;
+  height: 20vw;
+  border-radius: 5px;
+  border: 2px solid var(--white);
+  background-color: var(--red);
+  font-family: var(--MainF), sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  padding: 0px 4px;
+}
+
+input#email, input#email2, select#subject, input#name, input#mobile-no, input#no-of-people, #date, .email-textarea{
+  border: 2px solid var(--white);
+  background-color: var(--red);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: var(--MainF), sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  align-content: center;
+  width: 40vw;
+}
+
+input, select, textarea {
+  margin-bottom: 10px;
+}
+
+.contact-input-btn, .favourite-input-btn {
+  border: 2px solid var(--white);
+  background-color: var(--red);
+  border-radius: 5px;
+  font-family: var(--MainF), sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  width: 12vw;
+}
+
+input[type=submit]:hover {
+  background-color: var(--dark-orange);
+  color: var(--white);
+}
+
+/*Menu Page*/
+.menu-info {
+  background-color: var(--red);
+  color: var(--white);
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 15px 20px;
+  border-color: var(--white);
+  font-weight: bold;
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+  width: 70vw;
+  margin: 7.5vh 1vw;
+  text-align: justify;
+}
+
+.menu-header {
+  color: var(--white);
+  font-weight: bold;
+  font-family: var(--MainF), sans-serif;
+  font-size: 4.5vw;
+  padding-bottom: 1vw;
+}
+
+.menu-details-image {
+  width: 30vw;
+  height: 30vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: solid 4px black;
+  margin: 4px 4px;
+  z-index: 1;
+  filter: grayscale(100%);
+  transition: filter 1s;
+}
+
+.menu-details-image:hover {
+  filter: grayscale(0%);
+}
+
+.menu-link:visited, .menu-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.menu-link:hover {
+  color: var(--yellow);
+}
+
+/*Dish Details Page*/
+.food-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu-details-text {
+  font-family: var(--MainF), sans-serif;
+  font-size: 1.5vw;
+  color: var(--black);
+}
+
+.menu-details-text-background {
+  padding: 2vw 2vw;
+  margin: 4px 4px;
+  min-height: 30%;
+  background-color: white;
+  z-index: 2;
+  filter: opacity(70%);
+}
+
+.menu-details-favourite {
+  float: right;
+  font-size: 2vw;
+	color:red;
+  border-width: 0px;
+  background: none;
+  margin-bottom: 10px;
+}
+
+/*CSS for smaller screen sizes*/
+@media (max-width: 650px) {
+  .menu-details-image {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .menu-details-text {
+    font-size: 3vw;
+  }
+  .menu-header {
+    font-size: 6vw;
+    padding-bottom: 1.5vw;
+  }
+
+  .menu-details-favourite {
+    font-size: 4vw;
+  }
+
+  .error {
+    font-size: 3vw;
+  }
+}
+
+/*This media query applies to main page*/
+@media (max-width: 788px) {
+  .info-img, .info-par{
+    width: 50%;
+    height: auto;
+  }
+
+  .info-elem {
+    padding: 0vh 2vw;
+  }
+
+  .workerPFP {
+    height: 30vh;
+    border-radius: 500px;
+  }
+
+  .info-style {
+    font-size: 3vw;
+    height: 20%;
+    width: 90%;
+    margin: 7.5vh 1vw;
+    text-align: justify;
+  }
+
+  .footer-text {
+    font-size: 2vw;
+  }
+
+  .sec-favourite-title {
+    font-size: 4vw;
+  }
+
+  .headertext {
+    font-size: 3em;
+  }
+
+  .subheadertext{
+    font-size: 2em;
+  }
+
+  .menu-info {
+    font-size: 3vw;
+  }
+
+  .email-textarea {
+    width: 60vw;
+    height: 40vw;
+  }
+
+  input#email, input#email2, select#subject, input#name, input#mobile-no, input#no-of-people, #date{
+    width: 60vw;
+  }
+
+  .sec-contact-title {
+    font-size: 3vw;
+  }
+
+  .error {
+    font-size: 2vw;
+  }
+}
+
+/*Hides Mobile Nav Bar*/
+@media (min-width: 426px) {
+  .Mobile-Nav{
+    display: none;
+    position: absolute;
+  }
+}
+
+/*Hides Desktop Nav Bar*/
+@media (max-width: 426px) {
+  .Desktop-Nav{
+    display: none;
+  }
+
+  .open-contact, .address {
+    padding: 0px 0px;
+  }
+
+  .info-elem {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .info-par, .info-img, .open-contact,.info-open-container, .address, .address-container {
+    min-width: 90vw;
+    margin: 10px;
+    align-items: center;
+  }
+
+  .info-par, .info-img, .list-elem, .info-open-title, .address-title {
+    font-size: 3.5vw;
+  }
+
+  .workerPFP {
+    height: 20vh;
+    border-radius: 500px;
+  }
+
+  .info-style {
+    font-size: 4.5vw;
+    height: 20%;
+    width: 90%;
+    margin: 7.5vh 1vw;
+    text-align: justify;
+  }
+
+  .footer-text {
+    font-size: 3vw;
+  }
+
+  .sec-favourite-title {
+    font-size: 5vw;
+  }
+
+  .headertext {
+    font-size: 2em;
+  }
+
+  .subheadertext{
+    font-size: 1.5em;
+  }
+
+  .menu-info {
+    font-size: 3.5vw;
+  }
+
+  .email-textarea {
+    width: 80vw;
+    height: 40vw;
+  }
+
+  input#email,input#email2, select#subject, input#name, input#mobile-no, input#no-of-people, #date{
+    width: 80vw;
+  }
+
+  .contact-input-btn, .favourite-input-btn {
+    width: 50vw;
+  }
+
+  .sec-contact-title {
+    font-size: 5vw;
+  }
+
+  .error {
+    font-size: 3vw;
+  }
+}
+
+/*Error Page CSS*/
+.errorPageImage {
+    background-image: url("../images/404image.png");
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: grayscale(60%);
+}
+
+
+.EText, button#HomeButton{
+  font-size: 2vw;
+}
+
+.headingError{
+  position:absolute;
+  display:block;
+  margin: 50vh auto;
+  width:100%;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--Font1), sans-serif;
+}
+
+button#HomeButton {
+  min-height: 5vh;
+  border: 4px solid var(--black);
+  background-color: var(--red);
+  border-radius: 5px;
+  color: var(--white);
+  font-family: var(--Font1), sans-serif;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 426px) {
+  .errorPageImage {
+    background-image: url("../images/error404Medium.png");
+  }
+
+  .EText, button#HomeButton{
+    font-size: 2vw;
+  }
+
+  .headingError{
+    position:absolute;
+    display:block;
+    margin: 15vh auto;
+    width:100%;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--Font1), sans-serif;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .errorPageImage {
+    background-image: url("../images/error404Small.jpg");
+  }
+
+  .EText, button#HomeButton{
+    font-size: 4vw;
+  }
+
+  .headingError{
+    position:absolute;
+    display:block;
+    margin: 15vh auto;
+    width:100%;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--Font1), sans-serif;
+  }
+}

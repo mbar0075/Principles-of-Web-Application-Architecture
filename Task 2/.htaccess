@@ -1,0 +1,20 @@
+Options -Indexes
+
+# enable the directives for this application
+ExpiresActive on
+
+# send an Expires: header for each of these mimetypes
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+
+# css may change more frequently, so a shorter expiration period is recommended
+ExpiresByType text/css "access plus 1 days"
+
+# Setting a custom 404 page
+ErrorDocument 404 /ProjectPart2/web/error.php
+ErrorDocument 403 /ProjectPart2/web/error.php
+
+<FilesMatch "\.(ini|htaccess)$">
+  Deny from all
+</FilesMatch>

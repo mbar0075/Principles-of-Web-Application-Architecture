@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <section class = "sec-content flexCenter">
+
+    <!--Showing basic information about the restaurant and some pictures-->
+    <div class = "info-list-container">
+      <ul class = "info-list">
+        <li class = "info-elem">
+          <img tabindex="0" class = "info-img" src = "../images/generic-img1.jpg" alt = "Los Pollos Founders Together" title = "Los Pollos Founders Together">
+          <p tabindex="0" class = info-par>Located in every corner of the island, Los Pollos Hermanos takes pride in its mouthwatering meals.
+            With a menu ranging from the juiciest burgers to crispy fried chicken wings, we provide some of the best meals in the country.
+            The name, translating to "The Chicken Brothers", truly represents what our restaurant stands for, eating chicken with family and friends.
+            Los Pollos Hermanos has 4 total restaurants in Malta and 1 in Gozo. These are found in San Giljan, Mellieha, Haz-Zebbug, Rabat and Marsalforn.
+            Founded in 2012 by the partners, we specialise in all types of chicken. Wings? Nuggets? Fillets? You name it and we've got it!</p>
+          </li>
+          <li class = "info-elem">
+              <img tabindex="0" class = "info-img" src = "../images/generic-img2.jpg" alt = "Los Pollos Hermanos restaurant" title = "Los Pollos Hermanos restaurant">
+              <p tabindex="0" class = "info-par">Back in 2011, Gus and Saul worked in a chicken-themed restaurant.
+                However, things didn't quite work out for them as the restaurant closed down at the end of the year.
+                This did not stop the brothers from doing what they love though.
+                After months of planning, they opened our first restaurant in San Giljan.
+                After the immediate success of the first restaurant, Los Pollos Hermanos was no longer a restaurant, but rather a chain.
+                Since then we have hired class chefs which accompanied by Gus and Saul, provide flavour-rich food.</p>
+            </li>
+            <li class = "info-elem">
+              <img tabindex="0" class = "info-img" src = "../images/generic-img3.jpg" alt = "Gus greeting customers" title = "Gus greeting customers">
+              <p tabindex="0" class = "info-par">Each and every day, we serve our customers exceptional food with impeccable service. We take pride in everything that we do.
+                Our ingredients are obtained from all across the island, which we then use to create some of the tastiest chicken the world has ever seen.
+                Come visit Los Pollos Hermanos, and find out what real chicken tastes like.</p>
+              </li>
+            </ul>
+
+          <!--Showing working hours-->
+          <div class = "open-contact">
+            <div class = "info-open-container">
+              <ul class = "info-open-list main-list-style">
+                  <li tabindex="0" class = "list-elem underline remove_p"><h3>Opening hours</h3></li>
+                {% for tempOpHours in openingHours %}
+                  {% if (tempOpHours.id % 2) == 0 %}
+                    <li tabindex="0" class = "list-elem chicken_p">{{ tempOpHours.day }}: {{ tempOpHours.time }}</li>
+                  {% else %}
+                    <li tabindex="0" class = "list-elem fries_p">{{ tempOpHours.day }}: {{ tempOpHours.time }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <!--Showing Restaurant addresses-->
+          <div class = "address">
+            <div class = "address-container">
+              <ul class = "address-list main-list-style">
+                <li tabindex="0" class = "list-elem underline remove_p"><h3>Malta Location Addresses</h3></li>
+                {% for tempLocation in locations %}
+                  <li tabindex="0" class = "list-elem beer_p">{{ tempLocation.address }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          </section>
+{% endblock %}

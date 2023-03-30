@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <section class = "sec-content flexCenter">
+    <br><br>
+    <!--Looping through every Category Row-->
+    {% for Categories in foodCategories %}
+
+          <!--Error Checking-->
+          {% if not (reqdItemId is not empty) %}
+            <div class = "food-type flexCenter">
+          {% endif %}
+              <!--Checking if the food item categoryId corresponds to the Categories' categoryID-->
+              {% if foodItems.categoryId == Categories.categoryID %}
+                <!--Error Checking and checking if passed reqdItemId corresponds to current food item-->
+                {% if ((reqdItemId is not empty) and (reqdItemId == foodItems.itemId)) %}
+                <!--Displaying Category name-->
+                <br><br><div tabindex="0" class = "menu-header">{{ Categories.categoryName }}</div>
+                <!--Displaying requested item information-->
+                <div tabindex="0" style="background-image:url({{ foodItems.itemImage }})" alt="{{ foodItems.itemName }}" id="{{ foodItems.itemId }}" class = "menu-details-image">
+                  <div class="menu-details-text-background">
+                    <div class="menu-details-text italics">
+                      <strong>{{ foodItems.itemName }}</strong><br>
+                      {{ foodItems.itemDescription }}<br>
+                      € {{ foodItems.itemPrice }}<br>
+                      <div>
+                        <!-- Checking if the current food item is not a favourited dish -->
+                        {% if foodItems.itemId not in favouritesSession %}
+                            <!-- Error Checking and displaying an empty heart.
+                                 If the user clicks on the heart, it execute the function
+                                 in addFavourites.php, thus adding the item to the
+                                 Favourites list-->
+                            {% if (reqdItemId is not empty) %}
+                              <a href="addFavourite.php?redirect=0&itemId={{ foodItems.itemId }}&requiredItemId={{ foodItems.itemId }}"><button class="fa fa-heart-o menu-details-favourite" tabindex="-1" type="button"></button></a><br>
+                            {% else %}
+                              <a href="addFavourite.php?redirect=0&itemId={{ foodItems.itemId }}"><button class="fa fa-heart-o menu-details-favourite" tabindex="-1" type="button"></button></a><br>
+                            {% endif %}
+                        {% else %}
+                        <!-- Error Checking and displaying a red heart.
+                             If the user clicks on the heart, it execute the function
+                             in addFavourites.php, thus adding the item to the
+                             Favourites list-->
+                            {% if (reqdItemId is not empty) %}
+                              <a href="addFavourite.php?redirect=0&itemId={{ foodItems.itemId }}&requiredItemId={{ foodItems.itemId }}"><button class="fa fa-heart menu-details-favourite" tabindex="-1" type="button"></button></a><br>
+                            {% else %}
+                              <a href="addFavourite.php?redirect=0&itemId={{ foodItems.itemId }}"><button class="fa fa-heart menu-details-favourite"  tabindex="-1" type="button"></button></a><br>
+                            {% endif %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  {% endif %}
+                {% endif %}
+            </div>
+            {% endfor %}
+          </section>
+{% endblock %}

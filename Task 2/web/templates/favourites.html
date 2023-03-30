@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--Using extends to avoid repeating code-->
+
+  <section class = "sec-content flexCenter">
+    <!--Looping through every Category Row-->
+    {% for Categories in foodCategories %}
+        <!--Displaying Category name-->
+        <div tabindex="0" class = "menu-header">{{ Categories.categoryName }}</div>
+        <div tabindex="0" class = "food-type flexCenter">
+
+          <!-- For each iteration of the loop setting the variable check to 0 -->
+          {% set check = 0 %}
+          <!--Error checking to check whether foodItems exist -->
+          {% if foodItems is not empty %}
+            <!--Looping through every food item Row -->
+            {% for food in foodItems %}
+                <!-- Checking if the current food item is a favourited dish and also checking if
+                the current food item id corresponds to the current categoryId-->
+                {% if food.itemId in favouritesSession and food.categoryId == Categories.categoryID %}
+                <!--Setting check to 1, since a favourited item was found-->
+                  {% set check = 1 %}
+                  <!--Displaying current item information-->
+                    <div style="background-image:url({{ food.itemImage }})" alt="{{ food.itemName }}" id="{{ food.itemId }}" class = "menu-details-image">
+                      <div class="menu-details-text-background">
+                        <div class="menu-details-text italics">
+                          <strong>{{ food.itemName }}</strong><br>
+                      {{ food.itemDescription }}<br>
+                      € {{ food.itemPrice }}<br>
+                      <div>
+                        <!--Button to remove from favourites list -->
+                        <a href="addFavourite.php?redirect=1&itemId={{ food.itemId }}"><button class="fa fa-heart menu-details-favourite" tabindex="-1" type="button"></button></a><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            <!--Displaying relevant message if no favourited items were found in the Category-->
+            {% if check == 0 %}
+                <p class="menu-details-text italics">No items found in this category.</p>
+            {% endif %}
+              <!--Resetting check to 0-->
+              {% set check = 0 %}
+            </div>
+            <br><br>
+            {% endif %}
+            {% endfor %}
+
+            <!--Allowing the user to send the favourites as an email to a specified address-->
+            <div class = "favourite-container">
+              <form class="email-form" method="post" action="favouriteResp.php">
+                <h3 tabindex="0" class = "sec-favourite-title">Send Favourites List to Email</h3>
+                <p class ="error">{{ emailError }}{{tnxMessage}}</p>
+                <input type="email" id="email" name="email" tabindex="0" placeholder="Email Address" required value="{{ email }}"><br>
+                <input class="favourite-input-btn" tabindex="0" type="submit">
+              </form>
+            </div>
+          </section>
+
+{% endblock %}

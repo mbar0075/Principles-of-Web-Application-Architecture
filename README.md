@@ -12,10 +12,10 @@
 </p>
 
 ## Description of Task:
-During the project setup and preliminary tasks, a collaborative environment was established to facilitate effective teamwork. The focus was on setting up an HTTP server with PHP support, specifically using the Apache web server. This choice was made to ensure compatibility and to adhere to good web development principles. By utilizing Apache as the chosen web server and adhering to good web development principles, the project aimed to create a solid foundation for subsequent tasks and ensure a robust and efficient web application.
+During the project setup and preliminary tasks, a collaborative environment was established to facilitate effective teamwork. The focus was on setting up an HTTP server with PHP support, specifically using the Apache web server. This choice was made to ensure compatibility and to adhere to good web development principles. By utilizing **Apache** as the chosen web server and adhering to good web development principles, the project aimed to create a solid foundation for subsequent tasks and ensure a robust and efficient web application.
 
 ### Part 1 - SETUP AND PRELIMINARY TASKS 
-To set up an HTTP server with PHP support, the following process and technologies were involved. Firstly, Apache web server software was installed and configured as the chosen server for hosting the project. This included configuring Apache to enable PHP support, ensuring that PHP scripts could be executed on the server. The setup also involved configuring server settings and permissions to ensure proper functionality and security.
+To set up an **HTTP** server with **PHP** support, the following process and technologies were involved. Firstly, Apache web server software was installed and configured as the chosen server for hosting the project. This included configuring Apache to enable PHP support, ensuring that PHP scripts could be executed on the server. The setup also involved configuring server settings and permissions to ensure proper functionality and security.
 
 As part of the project, a simple script called "serverdt.php" was developed. This script was responsible for retrieving the current date and time on the server and returning it to the client. It provided a basic demonstration of server-side processing and data retrieval.
 
@@ -42,21 +42,48 @@ In accordance with the principles and best practices discussed throughout the co
 
 The website included a section dedicated to providing generic information about the restaurant, such as its address and opening hours. This information allowed users to quickly access essential details about the establishment.
 
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/9ccc195c-b3de-4681-be51-30f68e7a9444
+
+
 Another section of the website focused on introducing the individuals responsible for running the restaurant. This feature aimed to create a personal connection with the visitors by showcasing the people behind the scenes.
 
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/306ad3e9-6f32-4be1-9224-c4acbe5c0d45
+
+
 To facilitate communication between users and the restaurant, a comprehensive contact page was developed. This page offered various options, including the ability to book a table, send queries, or file complaints. It provided a convenient way for users to interact with the restaurant and express their needs or concerns.
+
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/165c95af-362b-41ad-ad42-a4f0d613fa0b
+
 
 An essential component of the website was the inclusion of an up-to-date menu, featuring a list of dishes currently served at Los Pollos Hermanos. The menu section allowed visitors to explore the culinary offerings and get a sense of the restaurant's cuisine.
 
 For each item listed in the menu, a separate page provided a detailed description. Users could access this page to learn more about specific dishes, including ingredients, preparation methods, and accompanying details.
 
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/116e0e77-ff9b-4821-81aa-bc032f97d39d
+
+
 To enhance user engagement and customization, a feature was implemented that allowed users to add individual dishes to a personalized "favorites" list. This functionality was accessible directly from the dish details page, enabling users to curate their preferred selections.
 
 The website also included a dedicated page specifically designed to display the marked dishes from the favorites list. Users could access this page to view the list of selected dishes, along with their respective details. Furthermore, users had the option to remove dishes from the list or send the entire list to an email address of their choice.
 
-To enable seamless updates and modifications to the menu content, a MySQL database was utilized. The menu page and the detailed item pages were dynamically generated based on the structured data stored in the database. This approach provided flexibility for non-technical users to independently manage and modify the website's content.
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/e1bcb71c-68f6-4763-8519-dcfc43860ca6
+
+
+To enable seamless updates and modifications to the menu content, a **MySQL** database was utilized. The menu page and the detailed item pages were dynamically generated based on the structured data stored in the database. This approach provided flexibility for non-technical users to independently manage and modify the website's content.
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/7c644a9b-c3f5-4a62-b0cc-a2f09ff008f4
+
+
 
 Overall, the project aimed to create an engaging and user-friendly website for Los Pollos Hermanos, incorporating essential restaurant information, interactive features, and dynamic menu functionality supported by a MySQL database.
+
+https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/103250564/33bed629-e61a-4cf8-8c2f-c4608681b623
+
+
 
 ## Deliverables:
 The repository includes Two directories for each Task of the Web Assignment as well as assignment documentation:<br />

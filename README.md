@@ -86,4 +86,4 @@ https://github.com/mbar0075/Principles-of-Web-Application-Architecture/assets/10
 
 
 ## Deliverables:
-The repository includes Two directories for each Task of the Web Assignment as well as assignment documentation:<br />
+**The repository includes Two directories for each Task of the Web Assignment as well as assignment documentation:** <br />

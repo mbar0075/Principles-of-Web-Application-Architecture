@@ -1,11 +1,11 @@
 # CIS1054- PART 2 – Dynamic Web Application
 
 ## Contents
-1. css folder contains the .css files<br />
-2. images folder contains the images which will be used in the website<br />
-3. js folder contains the .js files<br /> 
-4. web folder contains the .php, .html, .htaccess and .ini files<br />
-5. restaurantinfo.sql.gz zipped file contains the database files<br /><br />
+1. [css folder](https://github.com/mbar0075/Principles-of-Web-Application-Architecture/tree/main/Task%202/css) contains the .css files<br />
+2. [images folder](https://github.com/mbar0075/Principles-of-Web-Application-Architecture/tree/main/Task%202/images) contains the images which will be used in the website<br />
+3. [js folder](https://github.com/mbar0075/Principles-of-Web-Application-Architecture/tree/main/Task%202/js) contains the .js files<br /> 
+4. [web folder](https://github.com/mbar0075/Principles-of-Web-Application-Architecture/tree/main/Task%202/web) contains the .php, .html, .htaccess and .ini files<br />
+5. [restaurantinfo.sql.gz](https://github.com/mbar0075/Principles-of-Web-Application-Architecture/blob/main/Task%202/restaurantinfo.sql.gz) zipped file contains the database files<br /><br />
 
 ## Setup
 1. Download XAMPP, this can be facilitated through the following link: https://www.apachefriends.org/download.html <br />
@@ -30,6 +30,6 @@
 
 
 ## Authors
-Matthias Bartolo 0436103L<br />
-Jerome Agius 0353803L<br />
-Isaac Muscat 0265203L<br />
+**Matthias Bartolo 0436103L** <br />
+**Jerome Agius 0353803L** <br />
+**Isaac Muscat 0265203L** <br />

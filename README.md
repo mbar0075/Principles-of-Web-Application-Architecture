@@ -36,7 +36,7 @@ To handle client requests that contained parameters, a script named "processrequ
 
 Additionally, a script called "readsession.php" was developed to read and display the session variables stored by "processrequest.php". This script echoed the session variables back to the client in a neat format. It also provided an explanation of how sessions work in PHP and how PHP scripts can differentiate between different user sessions.<br>
 
-### Part 2 - SETUP AND PRELIMINARY TASKS 
+### Part 2 - DYNAMIC WEB APPLICATION 
 
 In accordance with the principles and best practices discussed throughout the course, the second part of the project involved building a dynamic website for the restaurant **Los Pollos Hermanos** (from TV-Series **Breaking Bad**). The website aimed to provide a range of features and functionalities to enhance the user experience.
 
